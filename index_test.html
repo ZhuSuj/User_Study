@@ -130,7 +130,7 @@ var dataimage = [
      else if( clickcount == dataimage.length ){
          console.log("clickcount     "+clickcount)
          //最后一个题
-         //d3.select("img").attr("src", "jpg_test/"+ dataimage[clickcount-1].image)
+         //d3.select("img").attr("src", "jpg/"+ dataimage[clickcount-1].image)
          const end_time = new Date()
          const timeconsuming = (end_time.getTime() - start_time.getTime())/1000
          var checked = $("input[name='radio_4']:checked").length
