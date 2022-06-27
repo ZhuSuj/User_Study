@@ -20,7 +20,7 @@
 
 
 <div id = "div_image">
-    <img id = "image" src="jpg_test/test.jpg" height="30%" width="30%"/>
+    <img id = "image" src="jpg/5.1-compare.jpg" height="60%" width="60%"/>
 </div>
 
 
@@ -66,8 +66,12 @@ var resultstring
 
 
 var dataimage = [
-    { "index":0,"image" : "3.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-    { "index":0,"image" : "4.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    { "index":0,"image" : "5.1.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+    { "index":0,"image" : "5.1.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+    { "index":0,"image" : "5.1.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+    { "index":0,"image" : "5.1.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+    { "index":0,"image" : "5.1.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+    { "index":0,"image" : "5.1.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
     { "index":0,"image" : "5.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"}
 ]
 
@@ -79,7 +83,7 @@ var dataimage = [
 
          //重新设置选择题
          var options = dataimage[clickcount].options.split(";")
-         for(var i = 0 ; i < dataimage.length; i++){
+         for(var i = 0 ; i < options.length; i++){
              d3.selectAll("#optiontext")._groups[0][i].innerHTML  = options[i]
          }
          var checkbox = document.getElementsByName("radio_4")
@@ -119,7 +123,7 @@ var dataimage = [
 
              //重新设置选择题
              var options = dataimage[clickcount].options.split(";")
-             for(var i = 0 ; i < dataimage.length; i++){
+             for(var i = 0 ; i < options.length; i++){
                  d3.selectAll("#optiontext")._groups[0][i].innerHTML  = options[i]
              }
 
