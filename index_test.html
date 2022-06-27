@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>User Study</title>
+</head>
+<body>
+<script src="vue.min.js"></script>
+<script type="text/javascript" src="js/d3.v4.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+
+<div id = "div_question">
+    <input   value="请回答">
+    <br>
+    下图中有实体个数为多少个：
+    <br><br><br>
+</div>
+
+
+<div id = "div_image">
+    <img id = "image" src="jpg_test/test.jpg" height="30%" width="30%"/>
+</div>
+
+
+<div id = "div_answer">
+    <input class = "options" type="checkbox" name="radio_4" value="A"><text id = "optiontext" value = "A">A、4</text><br>
+    <input class = "options" type="checkbox" name="radio_4" value="B"><text id = "optiontext" value = "B">B、5</text><br>
+    <input class = "options" type="checkbox" name="radio_4" value="C"><text id = "optiontext" value = "C">C、6</text><br>
+    <input class = "options" type="checkbox" name="radio_4" value="D"><text id = "optiontext" value = "D">D、7</text><br>
+</div>
+
+<div id = "next">
+    <br>
+    <button class = "normal" id = "Submit"  name="Submit" value=Submit>开始测试</button>
+</div>
+
+<br><br><br><br><br>
+<div id = "allresult" position = "absolute" style="height: 800px;width: 50px; top: 500px">
+
+</div>
+
+
+<style>
+    .active {
+        background-color: rgb(19, 212, 247);
+        color: #fff;
+    }
+    .normal {
+        background-color: rgb(157, 157, 158);
+        color: #fff;
+    }
+</style>
+</body>
+</html>
+<script>
+
+var start_time = new Date();
+var nextImageIndex = 0;
+var sortedIndexArray = null;
+var clickcount = 0
+
+var result_answes_timeconsuming = []
+var resultstring
+
+
+var dataimage = [
+    { "index":0,"image" : "3.1.1.jpg","question":"", "options":"A.11;B.3;C.4;D.5"},
+    { "index":1,"image" : "3.1.2.jpg","question":"", "options":"A.22;B.3;C.4;D.5"},
+    { "index":2,"image" : "4.1.1.jpg","question":"", "options":"A.33;B.3;C.4;D.5"},
+    { "index":3,"image" : "4.1.2.jpg","question":"", "options": "A.44;B.3;C.4;D.5"}
+]
+
+ $("#Submit").click(function(d,i){
+     console.log("clickcount     "+clickcount)
+     if(clickcount == 0){
+         //获取答案
+         d3.select("img").attr("src", "jpg_test/"+ dataimage[clickcount].image)
+
+         //重新设置选择题
+         var options = dataimage[clickcount].options.split(";")
+         for(var i = 0 ; i < dataimage.length; i++){
+             d3.selectAll("#optiontext")._groups[0][i].innerHTML  = options[i]
+         }
+         var checkbox = document.getElementsByName("radio_4")
+         for(var i = 0 ; i <checkbox.length ; i ++ ){
+             document.getElementsByName("radio_4")[i].checked = false
+         }
+         d3.selectAll("#Submit")._groups[0][0].innerHTML = "第"+ String(clickcount+1) + "道题提交"
+         start_time = new Date();
+     }
+     else if(clickcount > 0 & clickcount < dataimage.length ){     //4
+         console.log("clickcount     "+clickcount)
+         //是否填写答案
+         var checked = $("input[name='radio_4']:checked").length
+         if(checked == 1){
+             const end_time = new Date()
+             const timeconsuming = (end_time.getTime() - start_time.getTime())/1000
+             start_time = end_time
+             var answeroption = ""
+             var answeroptiontext = ""
+             //获取答案
+             var checkbox = document.getElementsByName("radio_4")
+             for(var i = 0 ; i <checkbox.length ; i ++ ){
+                 if(document.getElementsByName("radio_4")[i].checked){
+                     answeroption = document.getElementsByName("radio_4")[i].value
+                     answeroptiontext = d3.selectAll("#optiontext")._groups[0][i].innerHTML
+                 }
+                 document.getElementsByName("radio_4")[i].checked = false
+             }
+             result_answes_timeconsuming.push(
+                 {"index":dataimage[clickcount-1].index,"answer": answeroption, "answeroptiontext":answeroptiontext, "time_consuming":timeconsuming }
+             )
+
+             ////下一题
+             //d3.select("#Submit").attr("class","active")
+             d3.select("img").attr("src", "jpg_test/"+ dataimage[clickcount].image)
+             d3.select("#Submit").attr("class","normal")
+
+             //重新设置选择题
+             var options = dataimage[clickcount].options.split(";")
+             for(var i = 0 ; i < dataimage.length; i++){
+                 d3.selectAll("#optiontext")._groups[0][i].innerHTML  = options[i]
+             }
+
+             d3.selectAll("#Submit")._groups[0][0].innerHTML = "第"+ String(clickcount+1) + "道题提交"
+             console.log(timeconsuming,answeroption)
+         }
+     }
+     else if( clickcount == dataimage.length ){
+         console.log("clickcount     "+clickcount)
+         //最后一个题
+         //d3.select("img").attr("src", "jpg_test/"+ dataimage[clickcount-1].image)
+         const end_time = new Date()
+         const timeconsuming = (end_time.getTime() - start_time.getTime())/1000
+         var checked = $("input[name='radio_4']:checked").length
+         if(checked == 1){
+             //获取答案
+             var checkbox = document.getElementsByName("radio_4")
+             for(var i = 0 ; i <checkbox.length ; i ++ ){
+                 if(document.getElementsByName("radio_4")[i].checked){
+                     answeroption = document.getElementsByName("radio_4")[i].value
+                     answeroptiontext = d3.selectAll("#optiontext")._groups[0][i].innerHTML
+                 }
+                 //document.getElementsByName("radio_4")[i].checked = false
+             }
+             result_answes_timeconsuming.push(
+                 {"index":dataimage[clickcount-1].index,"answer": answeroption, "answeroptiontext":answeroptiontext, "time_consuming":timeconsuming }
+             )
+         }
+         console.log("result_answes_timeconsuming"+ result_answes_timeconsuming.length)
+
+     }
+     if( clickcount >= dataimage.length  ){
+         alert(result_answes_timeconsuming)
+         d3.select("#allresult").append("textarea").attr("id","result_p").style("height","500px").attr("row","1000").attr("cols","80")
+
+         var string = ""
+         for(var t = 0 ;  t < result_answes_timeconsuming.length; t++){
+             string = string
+                 + result_answes_timeconsuming[t].index+ ","
+                 + result_answes_timeconsuming[t].answer +","
+                 + result_answes_timeconsuming[t].answeroptiontext.split(".")[1] +","
+                 + result_answes_timeconsuming[t].time_consuming + ";\n"
+         }
+         resultstring = string
+         console.log(resultstring)
+         document.querySelector('#result_p').value = string
+     }
+
+     clickcount ++
+})
+
+
+
+
+
+    function start(){
+        next();
+        start_time = new Date();
+
+        document.getElementById("des").style.display='none';
+        document.getElementById("result").style.display='none';
+
+        document.getElementById("test").style.display='';
+    }
+    function next(){
+
+        if(nextImageIndex >= sortedIndexArray.length){
+            showResult();
+            return;
+        }
+        else{
+            document.getElementById("image").src = (timeDirectionImageArray[sortedIndexArray[nextImageIndex]]).name;
+            document.getElementById("question").innerHTML = (timeDirectionImageArray[sortedIndexArray[nextImageIndex]]).des;
+        }
+
+    }
+function showResult(){
+    document.getElementById("test").style.display='none';
+    document.getElementById("result").style.display='';
+    document.getElementById("result_p").value = "";
+    //document.getElementById("result").innerHTML = "测试结果(秒):<br/>";
+    var re = "";
+    for(var i = 0; i <timeDirectionImageArray.length ; i+=2){
+        re += timeDirectionImageArray[i].time;
+        re +=",";
+    }
+    document.getElementById("result_p").value += "Embed:"
+    document.getElementById("result_p").value += re;
+    re = "";
+    for(var i = 1 ; i <timeDirectionImageArray.length; i+=2){
+        re += timeDirectionImageArray[i].time;
+        re +=",";
+    }
+    document.getElementById("result_p").value += "\nLink:"
+    document.getElementById("result_p").value += re;
+
+}
+
+</script>
