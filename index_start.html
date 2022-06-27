@@ -66,12 +66,138 @@
     var resultstring
 
 
+    // var dataimage = [
+    //     { "index":0,"image" : "3.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+    //     { "index":1,"image" : "3.1.2.jpg","question":"几个单因果", "options":"A.22;B.3;C.4;D.5"},
+    //     { "index":2,"image" : "4.1.1.jpg","question":"几个多因果", "options":"A.33;B.3;C.4;D.5"},
+    //     { "index":3,"image" : "4.1.2.jpg","question":"那个为更好", "options": "A.44;B.3;C.4;D.5"}
+    // ]
+
     var dataimage = [
-        { "index":0,"image" : "3.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
-        { "index":1,"image" : "3.1.2.jpg","question":"几个单因果", "options":"A.22;B.3;C.4;D.5"},
-        { "index":2,"image" : "4.1.1.jpg","question":"几个多因果", "options":"A.33;B.3;C.4;D.5"},
-        { "index":3,"image" : "4.1.2.jpg","question":"那个为更好", "options": "A.44;B.3;C.4;D.5"}
+        { "index":0,"image" : "3.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "4.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "5.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "5.2-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "6.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "6.2-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "6.3-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "7.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "7.2-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "8.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "8.2-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "9.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "10.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+        { "index":0,"image" : "10.2-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+
+        { "index":0,"image" : "3.1.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "3.1.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "3.1.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "3.1.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "3.1.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "3.1.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "3.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+        { "index":0,"image" : "4.1.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "4.1.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "4.1.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "4.1.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "4.1.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "4.1.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "4.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+        { "index":0,"image" : "5.1.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "5.1.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "5.1.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "5.1.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "5.1.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "5.1.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "5.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+        { "index":0,"image" : "5.2.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "5.2.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "5.2.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "5.2.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "5.2.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "5.2.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "5.2-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+        { "index":0,"image" : "6.1.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "6.1.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "6.1.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "6.1.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "6.1.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "6.1.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "6.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+        { "index":0,"image" : "6.2.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "6.2.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "6.2.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "6.2.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "6.2.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "6.2.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "6.2-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+        { "index":0,"image" : "7.1.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "7.1.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "7.1.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "7.1.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "7.1.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "7.1.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "7.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+        { "index":0,"image" : "7.2.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "7.2.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "7.2.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "7.2.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "7.2.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "7.2.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "7.2-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+        { "index":0,"image" : "8.1.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "8.1.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "8.1.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "8.1.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "8.1.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "8.1.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "8.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+        { "index":0,"image" : "8.2.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "8.2.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "8.2.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "8.2.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "8.2.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "8.2.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "8.2-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+        { "index":0,"image" : "9.1.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "9.1.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "9.1.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "9.1.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "9.1.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "9.1.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "9.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+        { "index":0,"image" : "10.1.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "10.1.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "10.1.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "10.1.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "10.1.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "10.1.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "10.1-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+
+        { "index":0,"image" : "10.2.1.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "10.2.1.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "10.2.1.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "10.2.2.1.jpg","question":"几个实体", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "10.2.2.1.jpg","question":"几个单边", "options":"A.22;B.3;C.4;D.5"},
+        { "index":0,"image" : "10.2.2.1.jpg","question":"几个超边", "options":"A.11;B.3;C.4;D.5"},
+        { "index":0,"image" : "10.2-compare.jpg","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
     ]
+    for(var p = 0; p <dataimage.length; p++ ){
+        dataimage[i].index = p
+    }
+
 
     $("#Submit").click(function(d,i){
         console.log("clickcount     "+clickcount)
@@ -182,6 +308,18 @@
             resultstring = string
             console.log(resultstring)
             document.querySelector('#result_p').value = string
+
+            // //写入本地
+            // var fso
+            // try{
+            //     fso = new ActiveXObject("Scripting.FileSystemObject")
+            // }catch{
+            //     alert("写入文件失败，但可以复制下列文本给朱素佳")
+            //     return;
+            // }
+            // var file = fso.CreateTextFile("C:\\111111.txt",true)
+            // file.write(string)
+
         }
 
         clickcount ++
