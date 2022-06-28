@@ -26,10 +26,10 @@
 <div id = "div_answer">
     <text id = "questiontext" >喜欢哪一个？</text>
     <br><br>
-    <input class = "options" type="checkbox" name="radio_4" value="A"><text id = "optiontext" value = "A">A.测试</text><br>
-    <input class = "options" type="checkbox" name="radio_4" value="B"><text id = "optiontext" value = "B">B.测试</text><br>
-    <input class = "options" type="checkbox" name="radio_4" value="C"><text id = "optiontext" value = "C">C.测试</text><br>
-    <input class = "options" type="checkbox" name="radio_4" value="D"><text id = "optiontext" value = "D">D.测试</text><br>
+    <input class = "options" type="checkbox" name="radio_4" value="A"><text id = "optiontext" value = "A">A.第一个</text><br>
+    <input class = "options" type="checkbox" name="radio_4" value="B"><text id = "optiontext" value = "B">B.第二个</text><br>
+    <input class = "options" type="checkbox" name="radio_4" value="C"><text id = "optiontext" value = "C">C.都喜欢</text><br>
+    <input class = "options" type="checkbox" name="radio_4" value="D"><text id = "optiontext" value = "D">D.都不喜欢</text><br>
 </div>
 
 <div id = "next">
@@ -142,7 +142,6 @@ $("#Submit").click(function(d,i){
         if(checked == 1){
             const end_time = new Date()
             const timeconsuming = (end_time.getTime() - start_time.getTime())/1000
-            start_time = end_time
             var answeroption = ""
             var answeroptiontext = ""
             //获取答案
@@ -177,6 +176,7 @@ $("#Submit").click(function(d,i){
             d3.selectAll("#Submit")._groups[0][0].innerHTML = "第"+ String(clickcount+1) + "道题提交"
             d3.selectAll("#questiontext")._groups[0][0].innerHTML = dataimage[clickcount ].question
             console.log(timeconsuming,answeroption)
+            start_time = end_time
         }
     }
     else if( clickcount == dataimage.length ){
