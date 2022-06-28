@@ -107,131 +107,166 @@ var dataimage = [
 
 ]
 
- $("#Submit").click(function(d,i){
-     console.log("clickcount     "+clickcount)
-     if(clickcount == 0){
-         //获取答案
-         d3.select("img").attr("src", "jpg/"+ dataimage[clickcount].image)
 
-         //重新设置选择题
-         var options = dataimage[clickcount].options.split(";")
-         for(var i = 0 ; i < options.length; i++){
-             d3.selectAll("#optiontext")._groups[0][i].innerHTML  = options[i]
-         }
-         var checkbox = document.getElementsByName("radio_4")
-         for(var i = 0 ; i <checkbox.length ; i ++ ){
-             document.getElementsByName("radio_4")[i].checked = false
-         }
-         d3.selectAll("#Submit")._groups[0][0].innerHTML = "第"+ String(clickcount+1) + "道题提交"
-         start_time = new Date();
-     }
-     else if(clickcount > 0 & clickcount < dataimage.length ){     //4
-         console.log("clickcount     "+clickcount)
-         //是否填写答案
-         var checked = $("input[name='radio_4']:checked").length
-         if(checked == 1){
-             const end_time = new Date()
-             const timeconsuming = (end_time.getTime() - start_time.getTime())/1000
-             start_time = end_time
-             var answeroption = ""
-             var answeroptiontext = ""
-             //获取答案
-             var checkbox = document.getElementsByName("radio_4")
-             for(var i = 0 ; i <checkbox.length ; i ++ ){
-                 if(document.getElementsByName("radio_4")[i].checked){
-                     answeroption = document.getElementsByName("radio_4")[i].value
-                     answeroptiontext = d3.selectAll("#optiontext")._groups[0][i].innerHTML
-                 }
-                 document.getElementsByName("radio_4")[i].checked = false
-             }
-             result_answes_timeconsuming.push(
-                 {"index":dataimage[clickcount-1].index,"answer": answeroption, "answeroptiontext":answeroptiontext, "time_consuming":timeconsuming }
-             )
 
-             ////下一题
-             //d3.select("#Submit").attr("class","active")
-             d3.select("img").attr("src", "jpg/"+ dataimage[clickcount].image)
-             d3.select("#Submit").attr("class","normal")
 
-             //重新设置选择题
-             var options = dataimage[clickcount].options.split(";")
-             for(var i = 0 ; i < options.length; i++){
-                 d3.selectAll("#optiontext")._groups[0][i].innerHTML  = options[i]
-             }
 
-             d3.selectAll("#Submit")._groups[0][0].innerHTML = "第"+ String(clickcount+1) + "道题提交"
-             console.log(timeconsuming,answeroption)
-         }
-     }
-     else if( clickcount == dataimage.length ){
-         console.log("clickcount     "+clickcount)
-         //最后一个题
-         //d3.select("img").attr("src", "jpg/"+ dataimage[clickcount-1].image)
-         const end_time = new Date()
-         const timeconsuming = (end_time.getTime() - start_time.getTime())/1000
-         var checked = $("input[name='radio_4']:checked").length
-         if(checked == 1){
-             //获取答案
-             var checkbox = document.getElementsByName("radio_4")
-             for(var i = 0 ; i <checkbox.length ; i ++ ){
-                 if(document.getElementsByName("radio_4")[i].checked){
-                     answeroption = document.getElementsByName("radio_4")[i].value
-                     answeroptiontext = d3.selectAll("#optiontext")._groups[0][i].innerHTML
-                 }
-                 //document.getElementsByName("radio_4")[i].checked = false
-             }
-             result_answes_timeconsuming.push(
-                 {"index":dataimage[clickcount-1].index,"answer": answeroption, "answeroptiontext":answeroptiontext, "time_consuming":timeconsuming }
-             )
-         }
-         console.log("result_answes_timeconsuming"+ result_answes_timeconsuming.length)
+for(var p = 0; p <dataimage.length; p++ ){
+    dataimage[p].index = p
+}
 
-     }
-     if( clickcount >= dataimage.length  ){
-         alert(result_answes_timeconsuming)
-         d3.select("#allresult").append("textarea").attr("id","result_p").style("height","500px").attr("row","1000").attr("cols","80")
 
-         var string = ""
-         for(var t = 0 ;  t < result_answes_timeconsuming.length; t++){
-             string = string
-                 + result_answes_timeconsuming[t].index+ ","
-                 + result_answes_timeconsuming[t].answer +","
-                 + result_answes_timeconsuming[t].answeroptiontext.split(".")[1] +","
-                 + result_answes_timeconsuming[t].time_consuming + ";\n"
-         }
-         resultstring = string
-         console.log(resultstring)
-         document.querySelector('#result_p').value = string
-     }
+$("#Submit").click(function(d,i){
+    console.log("clickcount     "+clickcount)
+    if(clickcount == 0){
+        //获取答案
+        d3.select("img").attr("src", "jpg/"+ dataimage[clickcount].image)
 
-     clickcount ++
+        //重新设置选择题
+        var options = dataimage[clickcount].options.split(";")
+        for(var i = 0 ; i < options.length; i++){
+            d3.selectAll("#optiontext")._groups[0][i].innerHTML  = options[i]
+        }
+        var checkbox = document.getElementsByName("radio_4")
+        for(var i = 0 ; i <checkbox.length ; i ++ ){
+            document.getElementsByName("radio_4")[i].checked = false
+        }
+        d3.selectAll("#Submit")._groups[0][0].innerHTML = "第"+ String(clickcount+1) + "道题提交"
+        d3.selectAll("#questiontext")._groups[0][0].innerHTML = dataimage[clickcount].question
+        start_time = new Date();
+    }
+    else if(clickcount > 0 & clickcount < dataimage.length ){     //4
+        console.log("clickcount     "+clickcount)
+        //是否填写答案
+        var checked = $("input[name='radio_4']:checked").length
+        if(checked == 1){
+            const end_time = new Date()
+            const timeconsuming = (end_time.getTime() - start_time.getTime())/1000
+            start_time = end_time
+            var answeroption = ""
+            var answeroptiontext = ""
+            //获取答案
+            var checkbox = document.getElementsByName("radio_4")
+            for(var i = 0 ; i <checkbox.length ; i ++ ){
+                if(document.getElementsByName("radio_4")[i].checked){
+                    answeroption = document.getElementsByName("radio_4")[i].value
+                    answeroptiontext = d3.selectAll("#optiontext")._groups[0][i].innerHTML
+                }
+                document.getElementsByName("radio_4")[i].checked = false
+            }
+            result_answes_timeconsuming.push(
+                {"index":dataimage[clickcount-1].index,
+                    "answer": answeroption,
+                    "answeroptiontext":answeroptiontext,
+                    "time_consuming":timeconsuming ,
+                    "question":dataimage[clickcount-1].question
+                }
+            )
+
+            ////下一题
+            //d3.select("#Submit").attr("class","active")
+            d3.select("img").attr("src", "jpg/"+ dataimage[clickcount].image)
+            d3.select("#Submit").attr("class","normal")
+
+            //重新设置选择题
+            var options = dataimage[clickcount].options.split(";")
+            for(var i = 0 ; i < options.length; i++){
+                d3.selectAll("#optiontext")._groups[0][i].innerHTML  = options[i]
+            }
+
+            d3.selectAll("#Submit")._groups[0][0].innerHTML = "第"+ String(clickcount+1) + "道题提交"
+            d3.selectAll("#questiontext")._groups[0][0].innerHTML = dataimage[clickcount ].question
+            console.log(timeconsuming,answeroption)
+        }
+    }
+    else if( clickcount == dataimage.length ){
+        console.log("clickcount     "+clickcount)
+        //最后一个题
+        //d3.select("img").attr("src", "jpg/"+ dataimage[clickcount-1].image)
+        const end_time = new Date()
+        const timeconsuming = (end_time.getTime() - start_time.getTime())/1000
+        var checked = $("input[name='radio_4']:checked").length
+        if(checked == 1){
+            //获取答案
+            var checkbox = document.getElementsByName("radio_4")
+            for(var i = 0 ; i <checkbox.length ; i ++ ){
+                if(document.getElementsByName("radio_4")[i].checked){
+                    answeroption = document.getElementsByName("radio_4")[i].value
+                    answeroptiontext = d3.selectAll("#optiontext")._groups[0][i].innerHTML
+                }
+                //document.getElementsByName("radio_4")[i].checked = false
+            }
+            result_answes_timeconsuming.push(
+                {"index":dataimage[clickcount-1].index,
+                    "answer": answeroption,
+                    "answeroptiontext":answeroptiontext,
+                    "time_consuming":timeconsuming ,
+                    "question":dataimage[clickcount-1].question
+                }
+            )
+        }
+        console.log("result_answes_timeconsuming"+ result_answes_timeconsuming.length)
+
+    }
+    if( clickcount >= dataimage.length  ){
+        alert(result_answes_timeconsuming)
+        d3.select("#allresult").append("textarea").attr("id","result_p").style("height","500px").attr("row","1000").attr("cols","80")
+
+        var string = ""
+        for(var t = 0 ;  t < result_answes_timeconsuming.length; t++){
+            string = string
+                + result_answes_timeconsuming[t].index+ ","
+                + result_answes_timeconsuming[t].answer +","
+                + result_answes_timeconsuming[t].answeroptiontext.split(".")[1] +","
+                + result_answes_timeconsuming[t].time_consuming +","
+                + result_answes_timeconsuming[t].question
+                +";\n"
+        }
+        resultstring = string
+        console.log(resultstring)
+        document.querySelector('#result_p').value = string
+
+        // //写入本地
+        // var fso
+        // try{
+        //     fso = new ActiveXObject("Scripting.FileSystemObject")
+        // }catch{
+        //     alert("写入文件失败，但可以复制下列文本给朱素佳")
+        //     return;
+        // }
+        // var file = fso.CreateTextFile("C:\\111111.txt",true)
+        // file.write(string)
+
+    }
+
+    clickcount ++
 })
 
 
 
 
 
-    function start(){
-        next();
-        start_time = new Date();
+function start(){
+    next();
+    start_time = new Date();
 
-        document.getElementById("des").style.display='none';
-        document.getElementById("result").style.display='none';
+    document.getElementById("des").style.display='none';
+    document.getElementById("result").style.display='none';
 
-        document.getElementById("test").style.display='';
+    document.getElementById("test").style.display='';
+}
+function next(){
+
+    if(nextImageIndex >= sortedIndexArray.length){
+        showResult();
+        return;
     }
-    function next(){
-
-        if(nextImageIndex >= sortedIndexArray.length){
-            showResult();
-            return;
-        }
-        else{
-            document.getElementById("image").src = (timeDirectionImageArray[sortedIndexArray[nextImageIndex]]).name;
-            document.getElementById("question").innerHTML = (timeDirectionImageArray[sortedIndexArray[nextImageIndex]]).des;
-        }
-
+    else{
+        document.getElementById("image").src = (timeDirectionImageArray[sortedIndexArray[nextImageIndex]]).name;
+        document.getElementById("question").innerHTML = (timeDirectionImageArray[sortedIndexArray[nextImageIndex]]).des;
     }
+
+}
 function showResult(){
     document.getElementById("test").style.display='none';
     document.getElementById("result").style.display='';
