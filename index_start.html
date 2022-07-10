@@ -19,7 +19,7 @@
 
 
 <div id = "div_image">
-    <img id = "image" src="jpgV2/5.1-compare.png" height="60%" width="60%"/>
+    <img id = "image" src="jpgV2/5.1-compare.png" height="40%" width="40%"/>
     <br>
     <br>
     <br>
@@ -75,6 +75,172 @@
     //     { "index":2,"image" : "4.1.1.png","question":"几个多因果", "options":"A.33;B.3;C.4;D.5"},
     //     { "index":3,"image" : "4.1.2.png","question":"那个为更好", "options": "A.44;B.3;C.4;D.5"}
     // ]
+
+    // //V1, .jpg
+    //     var dataimage = [
+    //         { "index":0,"image" : "3.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "4.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "5.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "5.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "6.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "6.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "6.3-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "7.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "7.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "8.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "9.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "10.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //
+    //
+    //         { "index":0,"image" : "3.1.1.1.png","question":"几个实体", "options":"A.2;B.3;C.6;D.以上没有答案"},//答案3
+    //         { "index":0,"image" : "3.1.2.1.png","question":"几个实体", "options":"A.2;B.3;C.6;D.以上没有答案"},
+    //         { "index":0,"image" : "4.1.1.1.png","question":"几个实体", "options":"A.4;B.6;C.11;D.以上没有答案"},//答案4
+    //         { "index":0,"image" : "4.1.2.1.png","question":"几个实体", "options":"A.4;B.6;C.11;D.以上没有答案"},
+    //         { "index":0,"image" : "5.1.1.1.png","question":"几个实体", "options":"A.11;B.5;C.4;D.以上没有答案"},//答案5
+    //         { "index":0,"image" : "5.1.2.1.png","question":"几个实体", "options":"A.11;B.5;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "5.2.1.1.png","question":"几个实体", "options":"A.5;B.3;C.6;D.以上没有答案"},//答案5
+    //         { "index":0,"image" : "5.2.2.1.png","question":"几个实体", "options":"A.5;B.3;C.6;D.以上没有答案"},
+    //         { "index":0,"image" : "6.1.1.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},//答案6
+    //         { "index":0,"image" : "6.1.2.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "6.2.1.1.png","question":"几个实体", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案6
+    //         { "index":0,"image" : "6.2.2.1.png","question":"几个实体", "options":"A.11;B.6;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "6.3.1.1.png","question":"几个实体", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案6
+    //         { "index":0,"image" : "6.3.2.1.png","question":"几个实体", "options":"A.6;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "7.1.1.1.png","question":"几个实体", "options":"A.11;B.7;C.4;D.以上没有答案"},//答案7
+    //         { "index":0,"image" : "7.1.2.1.png","question":"几个实体", "options":"A.11;B.7;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "7.2.1.1.png","question":"几个实体", "options":"A.7;B.3;C.4;D.以上没有答案"},//答案7
+    //         { "index":0,"image" : "7.2.2.1.png","question":"几个实体", "options":"A.7;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "8.1.1.1.png","question":"几个实体", "options":"A.11;B.3;C.8;D.以上没有答案"},//答案8
+    //         { "index":0,"image" : "8.1.2.1.png","question":"几个实体", "options":"A.11;B.3;C.8;D.以上没有答案"},
+    //         { "index":0,"image" : "9.1.1.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},//答案9
+    //         { "index":0,"image" : "9.1.2.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "10.1.1.1.png","question":"几个实体", "options":"A.11;B.10;C.4;D.以上没有答案"},//答案10
+    //         { "index":0,"image" : "10.1.2.1.png","question":"几个实体", "options":"A.11;B.10;C.4;D.以上没有答案"},
+    //
+    //
+    //
+    //         { "index":0,"image" : "3.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.7;B.3;C.4;D.以上没有答案"},//答案3
+    //         { "index":0,"image" : "3.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.7;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "4.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案3
+    //         { "index":0,"image" : "4.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "5.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.10;B.3;C.4;D.以上没有答案"},//答案4
+    //         { "index":0,"image" : "5.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.12;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "5.2.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A. > 20;B.12;C.6;D.以上没有答案"},//答案6
+    //         { "index":0,"image" : "5.2.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A. > 20;B.12;C.6;D.以上没有答案"},
+    //         { "index":0,"image" : "6.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.9;B.3;C.4;D.以上没有答案"},//答案6
+    //         { "index":0,"image" : "6.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.9;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "6.2.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.9;C.4;D.以上没有答案"},//答案9
+    //         { "index":0,"image" : "6.2.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.9;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "6.3.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.>15;B.9;C.4;D.以上没有答案"},//答案9
+    //         { "index":0,"image" : "6.3.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.>15;B.9;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "7.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.10;B.3;C.4;D.以上没有答案"},//答案10
+    //         { "index":0,"image" : "7.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.10;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "7.2.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.6;C.4;D.以上没有答案"},//答案6
+    //         { "index":0,"image" : "7.2.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.6;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "8.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.7;C.4;D.以上没有答案"},//答案5
+    //         { "index":0,"image" : "8.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.7;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "9.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},//答案8
+    //         { "index":0,"image" : "9.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "10.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.12;C.2;D.以上没有答案"},//答案2
+    //         { "index":0,"image" : "10.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.12;C.2;D.以上没有答案"},
+    //
+    //
+    //
+    //         { "index":0,"image" : "3.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.1;B.3;C.4;D.以上没有答案"},//答案1
+    //         { "index":0,"image" : "3.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.1;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "4.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.3;C.4;D.以上没有答案"},//答案4
+    //         { "index":0,"image" : "4.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "5.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.7;C.4;D.以上没有答案"},//答案7
+    //         { "index":0,"image" : "5.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.7;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "5.2.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},//答案13
+    //         { "index":0,"image" : "5.2.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "6.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.5;C.4;D.以上没有答案"},//答案5
+    //         { "index":0,"image" : "6.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.5;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "6.2.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},//答案8
+    //         { "index":0,"image" : "6.2.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "6.3.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},//答案5
+    //         { "index":0,"image" : "6.3.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "7.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案6
+    //         { "index":0,"image" : "7.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "7.2.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.3;C.6;D.以上没有答案"},//答案6
+    //         { "index":0,"image" : "7.2.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.3;C.6;D.以上没有答案"},
+    //         { "index":0,"image" : "8.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案6
+    //         { "index":0,"image" : "8.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "9.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案6
+    //         { "index":0,"image" : "9.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "10.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.5;C.4;D.以上没有答案"},//答案11
+    //         { "index":0,"image" : "10.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.5;C.4;D.以上没有答案"},
+    //
+    //
+    //
+    //         { "index":0,"image" : "3.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.1;B.3;C.4;D.以上没有答案"},//答案4
+    //         { "index":0,"image" : "3.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.1;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "4.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.3;C.4;D.以上没有答案"},//答案8
+    //         { "index":0,"image" : "4.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "5.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},//答案13
+    //         { "index":0,"image" : "5.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "5.2.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},//答案19
+    //         { "index":0,"image" : "5.2.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "6.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.5;C.4;D.以上没有答案"},//答案14
+    //         { "index":0,"image" : "6.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.5;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "6.2.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},//答案17
+    //         { "index":0,"image" : "6.2.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "6.3.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},//答案14
+    //         { "index":0,"image" : "6.3.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "7.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案16
+    //         { "index":0,"image" : "7.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "7.2.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.3;C.6;D.以上没有答案"},//答案12
+    //         { "index":0,"image" : "7.2.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.3;C.6;D.以上没有答案"},
+    //         { "index":0,"image" : "8.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案11
+    //         { "index":0,"image" : "8.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "9.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案14
+    //         { "index":0,"image" : "9.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},
+    //         { "index":0,"image" : "10.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.5;C.4;D.以上没有答案"},//答案13
+    //         { "index":0,"image" : "10.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.5;C.4;D.以上没有答案"},
+    //
+    //
+    //         { "index":0,"image" : "3.1.1.1.png","question":"能找到从a-> ... ->c的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案a->b->c
+    //         { "index":0,"image" : "3.1.2.1.png","question":"能找到从a-> ... ->c的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+    //         { "index":0,"image" : "4.1.1.1.png","question":"能找到从b-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案b->c->d
+    //         { "index":0,"image" : "4.1.2.1.png","question":"能找到从b-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+    //         { "index":0,"image" : "5.1.1.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案b->c->d->e
+    //         { "index":0,"image" : "5.1.2.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+    //         { "index":0,"image" : "5.2.1.1.png","question":"能找到从a-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案a->b->c->d
+    //         { "index":0,"image" : "5.2.2.1.png","question":"能找到从a-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+    //         { "index":0,"image" : "6.1.1.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案b->c->e
+    //         { "index":0,"image" : "6.1.2.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+    //         { "index":0,"image" : "6.2.1.1.png","question":"能找到从c-> ... ->f的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案c->d->e->f
+    //         { "index":0,"image" : "6.2.2.1.png","question":"能找到从c-> ... ->f的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+    //         { "index":0,"image" : "6.3.1.1.png","question":"能找到从c-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案c->d->e
+    //         { "index":0,"image" : "6.3.2.1.png","question":"能找到从c-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+    //         { "index":0,"image" : "7.1.1.1.png","question":"能找到从f-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案f->e->d
+    //         { "index":0,"image" : "7.1.2.1.png","question":"能找到从f-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+    //         { "index":0,"image" : "7.2.1.1.png","question":"能找到从g-> ... ->b的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案g->f->e>b
+    //         { "index":0,"image" : "7.2.2.1.png","question":"能找到从g-> ... ->b的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+    //         { "index":0,"image" : "8.1.1.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案c->a->e
+    //         { "index":0,"image" : "8.1.2.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案
+    //         { "index":0,"image" : "9.1.1.1.png","question":"能找到从e-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案e->f->h
+    //         { "index":0,"image" : "9.1.2.1.png","question":"能找到从e-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案
+    //         { "index":0,"image" : "10.1.1.1.png","question":"能找到从c-> ... ->b的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D 不存在"},//答案d->a->i
+    //         { "index":0,"image" : "10.1.2.1.png","question":"能找到从c-> ... ->b的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D 不存在"},//答案
+    //
+    //
+    //
+    //         { "index":0,"image" : "3.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "4.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "5.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "5.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "6.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "6.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "6.3-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "7.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "7.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "8.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "9.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //         { "index":0,"image" : "10.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+    //
+    //
+    //     ]
 
     // var dataimage = [
     //     { "index":0,"image" : "3.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
@@ -231,46 +397,212 @@
     // ]
     //
 
+// //V2, .PNG
+//     var dataimage = [
+//         { "index":0,"image" : "3.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "4.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "5.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "5.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "6.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "6.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "6.3-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "7.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "7.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "8.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "9.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "10.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//
+//
+//         { "index":0,"image" : "3.1.1.1.png","question":"几个实体", "options":"A.2;B.3;C.6;D.以上没有答案"},//答案3
+//         { "index":0,"image" : "3.1.2.1.png","question":"几个实体", "options":"A.2;B.3;C.6;D.以上没有答案"},
+//         { "index":0,"image" : "4.1.1.1.png","question":"几个实体", "options":"A.4;B.6;C.11;D.以上没有答案"},//答案4
+//         { "index":0,"image" : "4.1.2.1.png","question":"几个实体", "options":"A.4;B.6;C.11;D.以上没有答案"},
+//         { "index":0,"image" : "5.1.1.1.png","question":"几个实体", "options":"A.11;B.5;C.4;D.以上没有答案"},//答案5
+//         { "index":0,"image" : "5.1.2.1.png","question":"几个实体", "options":"A.11;B.5;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "5.2.1.1.png","question":"几个实体", "options":"A.5;B.3;C.6;D.以上没有答案"},//答案5
+//         { "index":0,"image" : "5.2.2.1.png","question":"几个实体", "options":"A.5;B.3;C.6;D.以上没有答案"},
+//         { "index":0,"image" : "6.1.1.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},//答案6
+//         { "index":0,"image" : "6.1.2.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "6.2.1.1.png","question":"几个实体", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案6
+//         { "index":0,"image" : "6.2.2.1.png","question":"几个实体", "options":"A.11;B.6;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "6.3.1.1.png","question":"几个实体", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案6
+//         { "index":0,"image" : "6.3.2.1.png","question":"几个实体", "options":"A.6;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "7.1.1.1.png","question":"几个实体", "options":"A.11;B.7;C.4;D.以上没有答案"},//答案7
+//         { "index":0,"image" : "7.1.2.1.png","question":"几个实体", "options":"A.11;B.7;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "7.2.1.1.png","question":"几个实体", "options":"A.7;B.3;C.4;D.以上没有答案"},//答案7
+//         { "index":0,"image" : "7.2.2.1.png","question":"几个实体", "options":"A.7;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "8.1.1.1.png","question":"几个实体", "options":"A.11;B.3;C.8;D.以上没有答案"},//答案8
+//         { "index":0,"image" : "8.1.2.1.png","question":"几个实体", "options":"A.11;B.3;C.8;D.以上没有答案"},
+//         { "index":0,"image" : "9.1.1.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},//答案9
+//         { "index":0,"image" : "9.1.2.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "10.1.1.1.png","question":"几个实体", "options":"A.11;B.10;C.4;D.以上没有答案"},//答案10
+//         { "index":0,"image" : "10.1.2.1.png","question":"几个实体", "options":"A.11;B.10;C.4;D.以上没有答案"},
+//
+//
+//
+//         { "index":0,"image" : "3.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.7;B.3;C.4;D.以上没有答案"},//答案3
+//         { "index":0,"image" : "3.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.7;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "4.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案3
+//         { "index":0,"image" : "4.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "5.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.10;B.3;C.4;D.以上没有答案"},//答案4
+//         { "index":0,"image" : "5.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.12;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "5.2.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A. > 20;B.12;C.6;D.以上没有答案"},//答案6
+//         { "index":0,"image" : "5.2.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A. > 20;B.12;C.6;D.以上没有答案"},
+//         { "index":0,"image" : "6.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.9;B.3;C.4;D.以上没有答案"},//答案6
+//         { "index":0,"image" : "6.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.9;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "6.2.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.9;C.4;D.以上没有答案"},//答案9
+//         { "index":0,"image" : "6.2.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.9;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "6.3.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.>15;B.9;C.4;D.以上没有答案"},//答案9
+//         { "index":0,"image" : "6.3.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.>15;B.9;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "7.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.10;B.3;C.4;D.以上没有答案"},//答案10
+//         { "index":0,"image" : "7.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.10;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "7.2.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.6;C.4;D.以上没有答案"},//答案6
+//         { "index":0,"image" : "7.2.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.6;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "8.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.7;C.4;D.以上没有答案"},//答案5
+//         { "index":0,"image" : "8.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.7;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "9.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},//答案8
+//         { "index":0,"image" : "9.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "10.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.12;C.2;D.以上没有答案"},//答案2
+//         { "index":0,"image" : "10.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.12;C.2;D.以上没有答案"},
+//
+//
+//
+//         { "index":0,"image" : "3.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.1;B.3;C.4;D.以上没有答案"},//答案1
+//         { "index":0,"image" : "3.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.1;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "4.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.3;C.4;D.以上没有答案"},//答案4
+//         { "index":0,"image" : "4.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "5.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.7;C.4;D.以上没有答案"},//答案7
+//         { "index":0,"image" : "5.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.7;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "5.2.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},//答案13
+//         { "index":0,"image" : "5.2.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "6.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.5;C.4;D.以上没有答案"},//答案5
+//         { "index":0,"image" : "6.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.5;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "6.2.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},//答案8
+//         { "index":0,"image" : "6.2.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "6.3.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},//答案5
+//         { "index":0,"image" : "6.3.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "7.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案6
+//         { "index":0,"image" : "7.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "7.2.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.3;C.6;D.以上没有答案"},//答案6
+//         { "index":0,"image" : "7.2.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.3;C.6;D.以上没有答案"},
+//         { "index":0,"image" : "8.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案6
+//         { "index":0,"image" : "8.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "9.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案6
+//         { "index":0,"image" : "9.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "10.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.5;C.4;D.以上没有答案"},//答案11
+//         { "index":0,"image" : "10.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.5;C.4;D.以上没有答案"},
+//
+//
+//
+//         { "index":0,"image" : "3.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.1;B.3;C.4;D.以上没有答案"},//答案4
+//         { "index":0,"image" : "3.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.1;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "4.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.3;C.4;D.以上没有答案"},//答案8
+//         { "index":0,"image" : "4.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "5.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},//答案13
+//         { "index":0,"image" : "5.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "5.2.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},//答案19
+//         { "index":0,"image" : "5.2.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "6.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.5;C.4;D.以上没有答案"},//答案14
+//         { "index":0,"image" : "6.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.5;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "6.2.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},//答案17
+//         { "index":0,"image" : "6.2.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "6.3.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},//答案14
+//         { "index":0,"image" : "6.3.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "7.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案16
+//         { "index":0,"image" : "7.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "7.2.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.3;C.6;D.以上没有答案"},//答案12
+//         { "index":0,"image" : "7.2.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.3;C.6;D.以上没有答案"},
+//         { "index":0,"image" : "8.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案11
+//         { "index":0,"image" : "8.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "9.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案14
+//         { "index":0,"image" : "9.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},
+//         { "index":0,"image" : "10.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.5;C.4;D.以上没有答案"},//答案13
+//         { "index":0,"image" : "10.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.5;C.4;D.以上没有答案"},
+//
+//
+//         { "index":0,"image" : "3.1.1.1.png","question":"能找到从a-> ... ->c的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案a->b->c
+//         { "index":0,"image" : "3.1.2.1.png","question":"能找到从a-> ... ->c的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//         { "index":0,"image" : "4.1.1.1.png","question":"能找到从b-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案b->c->d
+//         { "index":0,"image" : "4.1.2.1.png","question":"能找到从b-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//         { "index":0,"image" : "5.1.1.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案b->c->d->e
+//         { "index":0,"image" : "5.1.2.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//         { "index":0,"image" : "5.2.1.1.png","question":"能找到从a-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案a->b->c->d
+//         { "index":0,"image" : "5.2.2.1.png","question":"能找到从a-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//         { "index":0,"image" : "6.1.1.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案b->c->e
+//         { "index":0,"image" : "6.1.2.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//         { "index":0,"image" : "6.2.1.1.png","question":"能找到从c-> ... ->f的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案c->d->e->f
+//         { "index":0,"image" : "6.2.2.1.png","question":"能找到从c-> ... ->f的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//         { "index":0,"image" : "6.3.1.1.png","question":"能找到从c-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案c->d->e
+//         { "index":0,"image" : "6.3.2.1.png","question":"能找到从c-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//         { "index":0,"image" : "7.1.1.1.png","question":"能找到从f-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案f->e->d
+//         { "index":0,"image" : "7.1.2.1.png","question":"能找到从f-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//         { "index":0,"image" : "7.2.1.1.png","question":"能找到从g-> ... ->b的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案g->f->e>b
+//         { "index":0,"image" : "7.2.2.1.png","question":"能找到从g-> ... ->b的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//         { "index":0,"image" : "8.1.1.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案c->a->e
+//         { "index":0,"image" : "8.1.2.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案
+//         { "index":0,"image" : "9.1.1.1.png","question":"能找到从e-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案e->f->h
+//         { "index":0,"image" : "9.1.2.1.png","question":"能找到从e-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案
+//         { "index":0,"image" : "10.1.1.1.png","question":"能找到从c-> ... ->b的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D 不存在"},//答案d->a->i
+//         { "index":0,"image" : "10.1.2.1.png","question":"能找到从c-> ... ->b的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D 不存在"},//答案
+//
+//
+//
+//         { "index":0,"image" : "3.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "4.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "5.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "5.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "6.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "6.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "6.3-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "7.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "7.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "8.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "9.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//         { "index":0,"image" : "10.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//
+//
+//     ]
 
+    //减少一部分
     var dataimage = [
         { "index":0,"image" : "3.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "4.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "5.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "5.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "4.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "5.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//       { "index":0,"image" : "5.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
         { "index":0,"image" : "6.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "6.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "6.3-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "7.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "7.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "6.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "6.3-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//       { "index":0,"image" : "7.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "7.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
         { "index":0,"image" : "8.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "9.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "9.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
         { "index":0,"image" : "10.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
 
 
-        { "index":0,"image" : "3.1.1.1.png","question":"几个实体", "options":"A.2;B.3;C.6;D.以上没有答案"},//答案3
-        { "index":0,"image" : "3.1.2.1.png","question":"几个实体", "options":"A.2;B.3;C.6;D.以上没有答案"},
+//        { "index":0,"image" : "3.1.1.1.png","question":"几个实体", "options":"A.2;B.3;C.6;D.以上没有答案"},//答案3
+//       { "index":0,"image" : "3.1.2.1.png","question":"几个实体", "options":"A.2;B.3;C.6;D.以上没有答案"},
         { "index":0,"image" : "4.1.1.1.png","question":"几个实体", "options":"A.4;B.6;C.11;D.以上没有答案"},//答案4
         { "index":0,"image" : "4.1.2.1.png","question":"几个实体", "options":"A.4;B.6;C.11;D.以上没有答案"},
-        { "index":0,"image" : "5.1.1.1.png","question":"几个实体", "options":"A.11;B.5;C.4;D.以上没有答案"},//答案5
-        { "index":0,"image" : "5.1.2.1.png","question":"几个实体", "options":"A.11;B.5;C.4;D.以上没有答案"},
-        { "index":0,"image" : "5.2.1.1.png","question":"几个实体", "options":"A.5;B.3;C.6;D.以上没有答案"},//答案5
-        { "index":0,"image" : "5.2.2.1.png","question":"几个实体", "options":"A.5;B.3;C.6;D.以上没有答案"},
+//        { "index":0,"image" : "5.1.1.1.png","question":"几个实体", "options":"A.11;B.5;C.4;D.以上没有答案"},//答案5
+//        { "index":0,"image" : "5.1.2.1.png","question":"几个实体", "options":"A.11;B.5;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "5.2.1.1.png","question":"几个实体", "options":"A.5;B.3;C.6;D.以上没有答案"},//答案5
+//        { "index":0,"image" : "5.2.2.1.png","question":"几个实体", "options":"A.5;B.3;C.6;D.以上没有答案"},
         { "index":0,"image" : "6.1.1.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},//答案6
-        { "index":0,"image" : "6.1.2.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},
-        { "index":0,"image" : "6.2.1.1.png","question":"几个实体", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案6
-        { "index":0,"image" : "6.2.2.1.png","question":"几个实体", "options":"A.11;B.6;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "6.1.2.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "6.2.1.1.png","question":"几个实体", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案6
+//        { "index":0,"image" : "6.2.2.1.png","question":"几个实体", "options":"A.11;B.6;C.4;D.以上没有答案"},
         { "index":0,"image" : "6.3.1.1.png","question":"几个实体", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案6
         { "index":0,"image" : "6.3.2.1.png","question":"几个实体", "options":"A.6;B.3;C.4;D.以上没有答案"},
-        { "index":0,"image" : "7.1.1.1.png","question":"几个实体", "options":"A.11;B.7;C.4;D.以上没有答案"},//答案7
-        { "index":0,"image" : "7.1.2.1.png","question":"几个实体", "options":"A.11;B.7;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "7.1.1.1.png","question":"几个实体", "options":"A.11;B.7;C.4;D.以上没有答案"},//答案7
+//       { "index":0,"image" : "7.1.2.1.png","question":"几个实体", "options":"A.11;B.7;C.4;D.以上没有答案"},
         { "index":0,"image" : "7.2.1.1.png","question":"几个实体", "options":"A.7;B.3;C.4;D.以上没有答案"},//答案7
-        { "index":0,"image" : "7.2.2.1.png","question":"几个实体", "options":"A.7;B.3;C.4;D.以上没有答案"},
-        { "index":0,"image" : "8.1.1.1.png","question":"几个实体", "options":"A.11;B.3;C.8;D.以上没有答案"},//答案8
-        { "index":0,"image" : "8.1.2.1.png","question":"几个实体", "options":"A.11;B.3;C.8;D.以上没有答案"},
-        { "index":0,"image" : "9.1.1.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},//答案9
-        { "index":0,"image" : "9.1.2.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "7.2.2.1.png","question":"几个实体", "options":"A.7;B.3;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "8.1.1.1.png","question":"几个实体", "options":"A.11;B.3;C.8;D.以上没有答案"},//答案8
+//        { "index":0,"image" : "8.1.2.1.png","question":"几个实体", "options":"A.11;B.3;C.8;D.以上没有答案"},
+//        { "index":0,"image" : "9.1.1.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},//答案9
+//        { "index":0,"image" : "9.1.2.1.png","question":"几个实体", "options":"A.6;B.9;C.4;D.以上没有答案"},
         { "index":0,"image" : "10.1.1.1.png","question":"几个实体", "options":"A.11;B.10;C.4;D.以上没有答案"},//答案10
-        { "index":0,"image" : "10.1.2.1.png","question":"几个实体", "options":"A.11;B.10;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "10.1.2.1.png","question":"几个实体", "options":"A.11;B.10;C.4;D.以上没有答案"},
 
 
 
@@ -278,24 +610,24 @@
         { "index":0,"image" : "3.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.7;B.3;C.4;D.以上没有答案"},
         { "index":0,"image" : "4.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案3
         { "index":0,"image" : "4.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},
-        { "index":0,"image" : "5.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.10;B.3;C.4;D.以上没有答案"},//答案4
-        { "index":0,"image" : "5.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.12;B.3;C.4;D.以上没有答案"},
-        { "index":0,"image" : "5.2.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A. > 20;B.12;C.6;D.以上没有答案"},//答案6
-        { "index":0,"image" : "5.2.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A. > 20;B.12;C.6;D.以上没有答案"},
+//        { "index":0,"image" : "5.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.10;B.3;C.4;D.以上没有答案"},//答案4
+//        { "index":0,"image" : "5.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.12;B.3;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "5.2.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A. > 20;B.12;C.6;D.以上没有答案"},//答案6
+//        { "index":0,"image" : "5.2.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A. > 20;B.12;C.6;D.以上没有答案"},
         { "index":0,"image" : "6.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.9;B.3;C.4;D.以上没有答案"},//答案6
         { "index":0,"image" : "6.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.9;B.3;C.4;D.以上没有答案"},
-        { "index":0,"image" : "6.2.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.9;C.4;D.以上没有答案"},//答案9
-        { "index":0,"image" : "6.2.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.9;C.4;D.以上没有答案"},
-        { "index":0,"image" : "6.3.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.>15;B.9;C.4;D.以上没有答案"},//答案9
-        { "index":0,"image" : "6.3.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.>15;B.9;C.4;D.以上没有答案"},
-        { "index":0,"image" : "7.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.10;B.3;C.4;D.以上没有答案"},//答案10
-        { "index":0,"image" : "7.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.10;B.3;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "6.2.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.9;C.4;D.以上没有答案"},//答案9
+//        { "index":0,"image" : "6.2.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.9;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "6.3.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.>15;B.9;C.4;D.以上没有答案"},//答案9
+//        { "index":0,"image" : "6.3.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.>15;B.9;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "7.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.10;B.3;C.4;D.以上没有答案"},//答案10
+//        { "index":0,"image" : "7.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.10;B.3;C.4;D.以上没有答案"},
         { "index":0,"image" : "7.2.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.6;C.4;D.以上没有答案"},//答案6
         { "index":0,"image" : "7.2.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.6;C.4;D.以上没有答案"},
         { "index":0,"image" : "8.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.7;C.4;D.以上没有答案"},//答案5
         { "index":0,"image" : "8.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.7;C.4;D.以上没有答案"},
-        { "index":0,"image" : "9.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},//答案8
-        { "index":0,"image" : "9.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "9.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},//答案8
+//        { "index":0,"image" : "9.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},
         { "index":0,"image" : "10.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.12;C.2;D.以上没有答案"},//答案2
         { "index":0,"image" : "10.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.22;B.12;C.2;D.以上没有答案"},
 
@@ -305,24 +637,24 @@
         { "index":0,"image" : "3.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.1;B.3;C.4;D.以上没有答案"},
         { "index":0,"image" : "4.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.3;C.4;D.以上没有答案"},//答案4
         { "index":0,"image" : "4.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.3;C.4;D.以上没有答案"},
-        { "index":0,"image" : "5.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.7;C.4;D.以上没有答案"},//答案7
-        { "index":0,"image" : "5.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.7;C.4;D.以上没有答案"},
-        { "index":0,"image" : "5.2.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},//答案13
-        { "index":0,"image" : "5.2.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "5.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.7;C.4;D.以上没有答案"},//答案7
+//        { "index":0,"image" : "5.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.7;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "5.2.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},//答案13
+//        { "index":0,"image" : "5.2.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},
         { "index":0,"image" : "6.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.5;C.4;D.以上没有答案"},//答案5
         { "index":0,"image" : "6.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.5;C.4;D.以上没有答案"},
-        { "index":0,"image" : "6.2.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},//答案8
-        { "index":0,"image" : "6.2.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},
-        { "index":0,"image" : "6.3.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},//答案5
-        { "index":0,"image" : "6.3.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},
-        { "index":0,"image" : "7.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案6
-        { "index":0,"image" : "7.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "6.2.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},//答案8
+//        { "index":0,"image" : "6.2.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "6.3.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},//答案5
+//        { "index":0,"image" : "6.3.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "7.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案6
+//        { "index":0,"image" : "7.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
         { "index":0,"image" : "7.2.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.3;C.6;D.以上没有答案"},//答案6
         { "index":0,"image" : "7.2.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.3;C.6;D.以上没有答案"},
         { "index":0,"image" : "8.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案6
         { "index":0,"image" : "8.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
-        { "index":0,"image" : "9.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案6
-        { "index":0,"image" : "9.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "9.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案6
+//        { "index":0,"image" : "9.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},
         { "index":0,"image" : "10.1.1.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.5;C.4;D.以上没有答案"},//答案11
         { "index":0,"image" : "10.1.2.1.png","question":"几个超边（2个及以上节点绑定在一起指向另一个节点）", "options":"A.>10;B.5;C.4;D.以上没有答案"},
 
@@ -332,24 +664,24 @@
         { "index":0,"image" : "3.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.1;B.3;C.4;D.以上没有答案"},
         { "index":0,"image" : "4.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.3;C.4;D.以上没有答案"},//答案8
         { "index":0,"image" : "4.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.3;C.4;D.以上没有答案"},
-        { "index":0,"image" : "5.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},//答案13
-        { "index":0,"image" : "5.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},
-        { "index":0,"image" : "5.2.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},//答案19
-        { "index":0,"image" : "5.2.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "5.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},//答案13
+//        { "index":0,"image" : "5.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "5.2.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},//答案19
+//        { "index":0,"image" : "5.2.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.3;C.4;D.以上没有答案"},
         { "index":0,"image" : "6.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.5;C.4;D.以上没有答案"},//答案14
         { "index":0,"image" : "6.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.5;C.4;D.以上没有答案"},
-        { "index":0,"image" : "6.2.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},//答案17
-        { "index":0,"image" : "6.2.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},
-        { "index":0,"image" : "6.3.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},//答案14
-        { "index":0,"image" : "6.3.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},
-        { "index":0,"image" : "7.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案16
-        { "index":0,"image" : "7.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "6.2.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},//答案17
+//        { "index":0,"image" : "6.2.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.8;B.3;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "6.3.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},//答案14
+//        { "index":0,"image" : "6.3.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.9;B.5;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "7.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案16
+//        { "index":0,"image" : "7.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
         { "index":0,"image" : "7.2.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.3;C.6;D.以上没有答案"},//答案12
         { "index":0,"image" : "7.2.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.3;C.6;D.以上没有答案"},
         { "index":0,"image" : "8.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},//答案11
         { "index":0,"image" : "8.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.11;B.6;C.4;D.以上没有答案"},
-        { "index":0,"image" : "9.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案14
-        { "index":0,"image" : "9.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},
+//        { "index":0,"image" : "9.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案14
+//        { "index":0,"image" : "9.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},
         { "index":0,"image" : "10.1.1.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.5;C.4;D.以上没有答案"},//答案13
         { "index":0,"image" : "10.1.2.1.png","question":"几对关系（1个或多个边绑定在一起指向另一个节点）", "options":"A.>10;B.5;C.4;D.以上没有答案"},
 
@@ -358,44 +690,45 @@
         { "index":0,"image" : "3.1.2.1.png","question":"能找到从a-> ... ->c的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
         { "index":0,"image" : "4.1.1.1.png","question":"能找到从b-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案b->c->d
         { "index":0,"image" : "4.1.2.1.png","question":"能找到从b-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
-        { "index":0,"image" : "5.1.1.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案b->c->d->e
-        { "index":0,"image" : "5.1.2.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
-        { "index":0,"image" : "5.2.1.1.png","question":"能找到从a-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案a->b->c->d
-        { "index":0,"image" : "5.2.2.1.png","question":"能找到从a-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//        { "index":0,"image" : "5.1.1.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案b->c->d->e
+//        { "index":0,"image" : "5.1.2.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//        { "index":0,"image" : "5.2.1.1.png","question":"能找到从a-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案a->b->c->d
+//        { "index":0,"image" : "5.2.2.1.png","question":"能找到从a-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
         { "index":0,"image" : "6.1.1.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案b->c->e
         { "index":0,"image" : "6.1.2.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
-        { "index":0,"image" : "6.2.1.1.png","question":"能找到从c-> ... ->f的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案c->d->e->f
-        { "index":0,"image" : "6.2.2.1.png","question":"能找到从c-> ... ->f的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
-        { "index":0,"image" : "6.3.1.1.png","question":"能找到从c-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案c->d->e
-        { "index":0,"image" : "6.3.2.1.png","question":"能找到从c-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
-        { "index":0,"image" : "7.1.1.1.png","question":"能找到从f-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案f->e->d
-        { "index":0,"image" : "7.1.2.1.png","question":"能找到从f-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//        { "index":0,"image" : "6.2.1.1.png","question":"能找到从c-> ... ->f的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案c->d->e->f
+//        { "index":0,"image" : "6.2.2.1.png","question":"能找到从c-> ... ->f的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//        { "index":0,"image" : "6.3.1.1.png","question":"能找到从c-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案c->d->e
+//        { "index":0,"image" : "6.3.2.1.png","question":"能找到从c-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
+//        { "index":0,"image" : "7.1.1.1.png","question":"能找到从f-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案f->e->d
+//        { "index":0,"image" : "7.1.2.1.png","question":"能找到从f-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
         { "index":0,"image" : "7.2.1.1.png","question":"能找到从g-> ... ->b的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案g->f->e>b
         { "index":0,"image" : "7.2.2.1.png","question":"能找到从g-> ... ->b的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案1
         { "index":0,"image" : "8.1.1.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案c->a->e
         { "index":0,"image" : "8.1.2.1.png","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案
-        { "index":0,"image" : "9.1.1.1.png","question":"能找到从e-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案e->f->h
-        { "index":0,"image" : "9.1.2.1.png","question":"能找到从e-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案
+//        { "index":0,"image" : "9.1.1.1.png","question":"能找到从e-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案e->f->h
+//        { "index":0,"image" : "9.1.2.1.png","question":"能找到从e-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在"},//答案
         { "index":0,"image" : "10.1.1.1.png","question":"能找到从c-> ... ->b的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D 不存在"},//答案d->a->i
         { "index":0,"image" : "10.1.2.1.png","question":"能找到从c-> ... ->b的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D 不存在"},//答案
 
 
 
-        { "index":0,"image" : "3.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "3.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
         { "index":0,"image" : "4.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "5.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "5.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "6.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "6.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "6.3-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "7.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "7.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "8.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
-        { "index":0,"image" : "9.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "5.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "5.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "6.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "6.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "6.3-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "7.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "7.2-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "8.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
+//        { "index":0,"image" : "9.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
         { "index":0,"image" : "10.1-compare.png","question":"喜欢哪一个", "options":"A.第一个;B.第二个;C.都不喜欢;D.都喜欢"},
 
 
     ]
+
 
 
 
@@ -443,6 +776,7 @@
                 }
                 result_answes_timeconsuming.push(
                     {"index":dataimage[clickcount-1].index,
+                        "image": dataimage[clickcount-1].image,
                         "answer": answeroption,
                         "answeroptiontext":answeroptiontext,
                         "time_consuming":timeconsuming ,
@@ -486,6 +820,7 @@
                 }
                 result_answes_timeconsuming.push(
                     {"index":dataimage[clickcount-1].index,
+                        "image": dataimage[clickcount-1].image,
                         "answer": answeroption,
                         "answeroptiontext":answeroptiontext,
                         "time_consuming":timeconsuming ,
@@ -504,6 +839,7 @@
             for(var t = 0 ;  t < result_answes_timeconsuming.length; t++){
                 string = string
                     + result_answes_timeconsuming[t].index+ ","
+                    + result_answes_timeconsuming[t].image+ ","
                     + result_answes_timeconsuming[t].answer +","
                     + result_answes_timeconsuming[t].answeroptiontext.split(".")[1] +","
                     + result_answes_timeconsuming[t].time_consuming +","
