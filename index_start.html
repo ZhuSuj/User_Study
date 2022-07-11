@@ -19,7 +19,7 @@
 
 
 <div id = "div_image">
-    <img id = "image" src="sketch.png" height="40%" width="40%"/>
+    <img id = "image" src="sketch.png" height="80%" width="80%"/>
     <br>
     <br>
     <br>
@@ -868,7 +868,7 @@
         console.log("clickcount     "+clickcount)
         if(clickcount == 0){
             //获取答案
-            d3.select("img").attr("src", "jpgV2/"+ dataimage[clickcount].image)
+            d3.select("img").attr("src", "jpgV2/"+ dataimage[clickcount].image).attr("height","40%").attr("width","40%")
 
             //重新设置选择题
             var options = dataimage[clickcount].options.split(";")
