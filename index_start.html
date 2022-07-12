@@ -743,7 +743,7 @@
         { "index":0,"image" : "7.2.2.1.png","question":"几个实体", "options":"A.7;B.3;C.4;D.以上没有答案"},
         { "index":0,"image" : "5.1.2.1.png","question":"几个实体", "options":"A.11;B.5;C.4;D.以上没有答案"},
         { "index":0,"image" : "10.1.2.1.png","question":"几个实体", "options":"A.11;B.10;C.4;D.以上没有答案"},
-        
+
         { "index":0,"image" : "4.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.6;B.3;C.4;D.以上没有答案"},//答案3
         { "index":0,"image" : "3.1.2.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.7;B.3;C.4;D.以上没有答案"},//答案3
         { "index":0,"image" : "3.1.1.1.png","question":"几个单边（一个节点指向另一个节点）", "options":"A.7;B.3;C.4;D.以上没有答案"},//答案3
@@ -814,12 +814,13 @@
         dataimage[p].index = p
     }
 
+    var path = "jpgV4/"
 
     $("#Submit").click(function(d,i){
         console.log("clickcount     "+clickcount)
         if(clickcount == 0){
             //获取答案
-            d3.select("img").attr("src", "jpgV2/"+ dataimage[clickcount].image).attr("height","40%").attr("width","40%")
+            d3.select("img").attr("src", path + dataimage[clickcount].image).attr("height","40%").attr("width","40%")
 
             //重新设置选择题
             var options = dataimage[clickcount].options.split(";")
@@ -864,7 +865,7 @@
 
                 ////下一题
                 //d3.select("#Submit").attr("class","active")
-                d3.select("img").attr("src", "jpgV2/"+ dataimage[clickcount].image)
+                d3.select("img").attr("src", path + dataimage[clickcount].image)
                 d3.select("#Submit").attr("class","normal")
 
                 //重新设置选择题

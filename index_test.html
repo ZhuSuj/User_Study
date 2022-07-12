@@ -173,12 +173,13 @@ for(var p = 0; p <dataimage.length; p++ ){
     dataimage[p].index = p
 }
 
+var path = "jpgV4/"
 
 $("#Submit").click(function(d,i){
     console.log("clickcount     "+clickcount)
     if(clickcount == 0){
         //获取答案
-        d3.select("img").attr("src", "jpg/"+ dataimage[clickcount].image).attr("height","40%").attr("width","40%")
+        d3.select("img").attr("src", path + dataimage[clickcount].image).attr("height","40%").attr("width","40%")
 
         //重新设置选择题
         var options = dataimage[clickcount].options.split(";")
@@ -223,7 +224,7 @@ $("#Submit").click(function(d,i){
 
             ////下一题
             //d3.select("#Submit").attr("class","active")
-            d3.select("img").attr("src", "jpg/"+ dataimage[clickcount].image)
+            d3.select("img").attr("src", path + dataimage[clickcount].image)
             d3.select("#Submit").attr("class","normal")
 
             //重新设置选择题
@@ -241,7 +242,7 @@ $("#Submit").click(function(d,i){
     else if( clickcount == dataimage.length ){
         console.log("clickcount     "+clickcount)
         //最后一个题
-        //d3.select("img").attr("src", "jpg/"+ dataimage[clickcount-1].image)
+        //d3.select("img").attr("src", path + dataimage[clickcount-1].image)
         const end_time = new Date()
         const timeconsuming = (end_time.getTime() - start_time.getTime())/1000
         var checked = $("input[name='radio_4']:checked").length
