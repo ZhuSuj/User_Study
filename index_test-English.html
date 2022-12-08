@@ -190,7 +190,7 @@ $("#Submit").click(function(d,i){
         for(var i = 0 ; i <checkbox.length ; i ++ ){
             document.getElementsByName("radio_4")[i].checked = false
         }
-        d3.selectAll("#Submit")._groups[0][0].innerHTML = "第"+ String(clickcount+1) + "道题提交"
+        d3.selectAll("#Submit")._groups[0][0].innerHTML = String(clickcount+1) + " question submit"
         d3.selectAll("#questiontext")._groups[0][0].innerHTML = dataimage[clickcount].question
         start_time = new Date();
     }
@@ -233,7 +233,7 @@ $("#Submit").click(function(d,i){
                 d3.selectAll("#optiontext")._groups[0][i].innerHTML  = options[i]
             }
 
-            d3.selectAll("#Submit")._groups[0][0].innerHTML = "第"+ String(clickcount+1) + "道题提交"
+            d3.selectAll("#Submit")._groups[0][0].innerHTML = String(clickcount+1) + " question submit"
             d3.selectAll("#questiontext")._groups[0][0].innerHTML = dataimage[clickcount ].question
             console.log(timeconsuming,answeroption)
             start_time = end_time
@@ -270,7 +270,7 @@ $("#Submit").click(function(d,i){
 
     }
     if( clickcount >= dataimage.length  ){
-        alert("不要担心，没有出错\n,请点击确定后，然后把文本框的文字复制并发送给朱素佳")
+        alert("Don't worry, all answers are recorded in the box")
         d3.select("#allresult").append("textarea").attr("id","result_p").style("height","500px").attr("row","1000").attr("cols","80")
 
         var string = ""
