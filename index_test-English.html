@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>User Study</title>
+</head>
+<body>
+<script src="vue.min.js"></script>
+<script type="text/javascript" src="js/d3.v4.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+
+<div id = "div_question">
+    <input   value="Please Answer Questions. One answer is required to enter the next question.">
+    <br>
+    <br>
+</div>
+
+
+<div id = "div_image">
+    <img id = "image" src="sketch-for-chinese.png" height="80%" width="80%"/>
+</div>
+
+
+<div id = "div_answer">
+    <text id = "questiontext" >Prefer？：</text>
+    <br><br>
+    <input class = "options" type="checkbox" name="radio_4" value="A"><text id = "optiontext" value = "A">A.The first</text><br>
+    <input class = "options" type="checkbox" name="radio_4" value="B"><text id = "optiontext" value = "B">B.The Second</text><br>
+    <input class = "options" type="checkbox" name="radio_4" value="C" ><text id = "optiontext" value = "C">C.Both of them</text><br>
+    <input class = "options" type="checkbox" name="radio_4" value="D" ><text id = "optiontext" value = "D">D.None of them</text><br>
+</div>
+
+<div id = "next">
+    <br>
+    <button class = "normal" id = "Submit"  name="Submit" value=Submit>Are you ready?   Now click this button to start tasks</button>
+</div>
+
+<br><br><br><br><br>
+<div id = "allresult" position = "absolute" style="height: 800px;width: 50px; top: 500px">
+
+</div>
+
+
+<style>
+    .active {
+        background-color: rgb(19, 212, 247);
+        color: #fff;
+    }
+    .normal {
+        background-color: rgb(157, 157, 158);
+        color: #fff;
+    }
+</style>
+</body>
+</html>
+<script>
+
+var start_time = new Date();
+var nextImageIndex = 0;
+var sortedIndexArray = null;
+var clickcount = 0
+
+var result_answes_timeconsuming = []
+var resultstring
+
+// //两组完整的数据
+// var dataimage = [
+//
+//     { "index":0,"image" : "6.1-compare.jpg","question":"Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+//     { "index":0,"image" : "9.1-compare.jpg","question":"Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+//
+//     { "index":0,"image" : "6.1.1.1.jpg","question":"How many entities?", "options":"A.6;B.3;C.4;D.No answers"},//答案6
+//     { "index":0,"image" : "6.1.2.1.jpg","question":"How many entities?", "options":"A.6;B.3;C.4;D.No answers"},
+//     { "index":0,"image" : "9.1.1.1.jpg","question":"How many entities?", "options":"A.>5;B.3;C.4;D.No answers"},//答案9
+//     { "index":0,"image" : "9.1.2.1.jpg","question":"How many entities?", "options":"A.>5;B.3;C.4;D.No answers"},
+//
+//     { "index":0,"image" : "6.1.1.1.jpg","question":"How many one-to-one relationships?", "options":"A.9;B.3;C.4;D.No answers"},//答案9
+//     { "index":0,"image" : "6.1.2.1.jpg","question":"How many one-to-one relationships?", "options":"A.9;B.3;C.4;D.No answers"},
+//     { "index":0,"image" : "9.1.1.1.jpg","question":"How many one-to-one relationships?", "options":"A.22;B.8;C.4;D.No answers"},//答案8
+//     { "index":0,"image" : "9.1.2.1.jpg","question":"How many one-to-one relationships?", "options":"A.22;B.8;C.4;D.No answers"},
+//
+//     { "index":0,"image" : "6.1.1.1.jpg","question":"How many many-to-one relationships?", "options":"A.5;B.3;C.4;D.No answers"},//答案5
+//     { "index":0,"image" : "6.1.2.1.jpg","question":"How many many-to-one relationships?", "options":"A.5;B.3;C.4;D.No answers"},
+//     { "index":0,"image" : "9.1.1.1.jpg","question":"How many many-to-one relationships?", "options":"A.6;B.3;C.4;D.No answers"},//答案6
+//     { "index":0,"image" : "9.1.2.1.jpg","question":"How many many-to-one relationships?", "options":"A.6;B.3;C.4;D.No answers"},
+//
+//
+//     { "index":0,"image" : "6.1.1.1.jpg","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在 "},//答案b->c->e
+//     { "index":0,"image" : "6.1.2.1.jpg","question":"能找到从b-> ... ->e的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在 "},//答案1
+//     { "index":0,"image" : "9.1.1.1.jpg","question":"能找到从e-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在 "},//答案e->f->d
+//     { "index":0,"image" : "9.1.2.1.jpg","question":"能找到从e-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在 "},//答案
+//
+//
+//     { "index":0,"image" : "6.1-compare.jpg","question":"Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+//     { "index":0,"image" : "9.1-compare.jpg","question":"Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+//
+//
+//     // { "index":0,"image" : "6.1-compare.jpg","question":"实体数目好找吗？Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+//     // { "index":0,"image" : "6.1-compare.jpg","question":"单边数目好找吗？Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+//     // { "index":0,"image" : "6.1-compare.jpg","question":"实体数目好找吗？Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+//     // { "index":0,"image" : "9.1-compare.jpg","question":"实体数目好找吗？Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+//     // { "index":0,"image" : "9.1-compare.jpg","question":"单边数目好找吗？Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+//     // { "index":0,"image" : "9.1-compare.jpg","question":"实体数目好找吗？Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+//
+//
+// ]
+
+var dataimage = [
+
+    { "index":0,"image" : "3.1-compare.png","question":"Do you prefer the first or the second", "options":"A.The first;B.The second;C.None of them;D.Both of them"},
+    { "index":0,"image" : "6.1-compare.png","question":"Do you prefer the first or the second", "options":"A.The first;B.the second;C.None of them;D.Both of them"},
+//    { "index":0,"image" : "9.1-compare.png","question":"Do you prefer the first or the second", "options":"A.The first;B.The second;C.None of them;D.Both of them"},
+
+
+
+    { "index":0,"image" : "6.1.1.1.png","question":"How many entities?", "options":"A.6;B.3;C.4;D.No answers"},//答案6
+    { "index":0,"image" : "6.1.2.1.png","question":"How many entities?", "options":"A.6;B.3;C.4;D.No answers"},
+//    { "index":0,"image" : "9.1.1.1.png","question":"How many entities?", "options":"A.>5;B.3;C.4;D.No answers"},//答案9
+//    { "index":0,"image" : "9.1.2.1.png","question":"How many entities?", "options":"A.>5;B.3;C.4;D.No answers"},
+
+
+    { "index":0,"image" : "6.1.2.1.png","question":"How many one-to-one relationships?", "options":"A.9;B.3;C.4;D.No answers"},
+    { "index":0,"image" : "6.1.1.1.png","question":"How many one-to-one relationships?", "options":"A.9;B.3;C.4;D.No answers"},//答案9
+
+    { "index":0,"image" : "9.1.1.1.png","question":"How many one-to-one relationships?", "options":"A.22;B.8;C.4;D.No answers"},//答案8
+//    { "index":0,"image" : "9.1.2.1.png","question":"How many one-to-one relationships?", "options":"A.22;B.8;C.4;D.No answers"},
+
+    { "index":0,"image" : "6.1.1.1.png","question":"How many many-to-one relationships?", "options":"A.5;B.3;C.4;D.No answers"},//答案4
+    { "index":0,"image" : "6.1.2.1.png","question":"How many many-to-one relationships?", "options":"A.5;B.3;C.4;D.No answers"},
+    { "index":0,"image" : "9.1.2.1.png","question":"How many many-to-one relationships?", "options":"A.6;B.3;C.4;D.No answers"},
+//    { "index":0,"image" : "9.1.1.1.png","question":"How many many-to-one relationships?", "options":"A.6 正确答案;B.3;C.4;D.No answers"},//答案6
+
+
+    // { "index":0,"image" : "6.1.1.1.png","question":"有几组关系", "options":"A.9;B.13 正确答案;C.14;D.No answers"},//答案13
+    // { "index":0,"image" : "6.1.2.1.png","question":"有几组关系", "options":"A.9;B.3;C.14 正确答案;D.No answers"},
+
+
+    { "index":0,"image" : "6.1.2.1.png","question":"Can you find a pathway b-> ... ->e ?", "options":"A.very easy; B.easy;C.difficult, but I find it;D.not exist "},//答案1
+    { "index":0,"image" : "6.1.1.1.png","question":"Can you find a pathway b-> ... ->e ?", "options":"A.very easy; B.easy;C.difficult, but I find it;D.not exist},//答案b->c->e
+
+
+    // { "index":0,"image" : "3.1-compare.png","question":"针对于累计关系数目，Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+    // { "index":0,"image" : "6.1-compare.png","question":"针对于累计关系数目，Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+    //
+    // { "index":0,"image" : "3.1-compare.png","question":"针对于找路径，Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+    // { "index":0,"image" : "6.1-compare.png","question":"针对于找路径，Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+
+//    { "index":0,"image" : "9.1.1.1.png","question":"能找到从e-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在 "},//答案e->f->d
+//    { "index":0,"image" : "9.1.2.1.png","question":"能找到从e-> ... ->d的一条路径吗", "options":"A.很容易发现;B.不容易，但找到了;C.找不到;D.不存在 "},//答案
+
+
+//    { "index":0,"image" : "6.1-compare.png","question":"Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+//    { "index":0,"image" : "9.1-compare.png","question":"Do you prefer the first or the second", "options":"A.The first;B.the second;C.None of them;D.Both of them"},
+
+
+    // { "index":0,"image" : "6.1-compare.png","question":"实体数目好找吗？Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+    // { "index":0,"image" : "6.1-compare.png","question":"单边数目好找吗？Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+    // { "index":0,"image" : "6.1-compare.png","question":"实体数目好找吗？Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+    // { "index":0,"image" : "9.1-compare.png","question":"实体数目好找吗？Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+    // { "index":0,"image" : "9.1-compare.png","question":"单边数目好找吗？Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+    // { "index":0,"image" : "9.1-compare.png","question":"实体数目好找吗？Do you prefer the first or the second", "options":"A.the first;B.the second;C.None of them;D.Both of them"},
+
+
+]
+
+
+
+
+
+for(var p = 0; p <dataimage.length; p++ ){
+    dataimage[p].index = p
+}
+
+var path = "jpgV5/"
+
+$("#Submit").click(function(d,i){
+    console.log("clickcount     "+clickcount)
+    if(clickcount == 0){
+        //获取答案
+        d3.select("img").attr("src", path + dataimage[clickcount].image).attr("height","40%").attr("width","40%")
+
+        //重新设置选择题
+        var options = dataimage[clickcount].options.split(";")
+        for(var i = 0 ; i < options.length; i++){
+            d3.selectAll("#optiontext")._groups[0][i].innerHTML  = options[i]
+        }
+        var checkbox = document.getElementsByName("radio_4")
+        for(var i = 0 ; i <checkbox.length ; i ++ ){
+            document.getElementsByName("radio_4")[i].checked = false
+        }
+        d3.selectAll("#Submit")._groups[0][0].innerHTML = "第"+ String(clickcount+1) + "道题提交"
+        d3.selectAll("#questiontext")._groups[0][0].innerHTML = dataimage[clickcount].question
+        start_time = new Date();
+    }
+    else if(clickcount > 0 & clickcount < dataimage.length ){     //4
+        console.log("clickcount     "+clickcount)
+        //是否填写答案
+        var checked = $("input[name='radio_4']:checked").length
+        if(checked == 1){
+            const end_time = new Date()
+            const timeconsuming = (end_time.getTime() - start_time.getTime())/1000
+            var answeroption = ""
+            var answeroptiontext = ""
+            //获取答案
+            var checkbox = document.getElementsByName("radio_4")
+            for(var i = 0 ; i <checkbox.length ; i ++ ){
+                if(document.getElementsByName("radio_4")[i].checked){
+                    answeroption = document.getElementsByName("radio_4")[i].value
+                    answeroptiontext = d3.selectAll("#optiontext")._groups[0][i].innerHTML
+                }
+                document.getElementsByName("radio_4")[i].checked = false
+            }
+            result_answes_timeconsuming.push(
+                {"index":dataimage[clickcount-1].index,
+                    "image": dataimage[clickcount-1].image,
+                    "answer": answeroption,
+                    "answeroptiontext":answeroptiontext,
+                    "time_consuming":timeconsuming ,
+                    "question":dataimage[clickcount-1].question
+                }
+            )
+
+            ////下一题
+            //d3.select("#Submit").attr("class","active")
+            d3.select("img").attr("src", path + dataimage[clickcount].image)
+            d3.select("#Submit").attr("class","normal")
+
+            //重新设置选择题
+            var options = dataimage[clickcount].options.split(";")
+            for(var i = 0 ; i < options.length; i++){
+                d3.selectAll("#optiontext")._groups[0][i].innerHTML  = options[i]
+            }
+
+            d3.selectAll("#Submit")._groups[0][0].innerHTML = "第"+ String(clickcount+1) + "道题提交"
+            d3.selectAll("#questiontext")._groups[0][0].innerHTML = dataimage[clickcount ].question
+            console.log(timeconsuming,answeroption)
+            start_time = end_time
+        }
+    }
+    else if( clickcount == dataimage.length ){
+        console.log("clickcount     "+clickcount)
+        //最后一个题
+        //d3.select("img").attr("src", path + dataimage[clickcount-1].image)
+        const end_time = new Date()
+        const timeconsuming = (end_time.getTime() - start_time.getTime())/1000
+        var checked = $("input[name='radio_4']:checked").length
+        if(checked == 1){
+            //获取答案
+            var checkbox = document.getElementsByName("radio_4")
+            for(var i = 0 ; i <checkbox.length ; i ++ ){
+                if(document.getElementsByName("radio_4")[i].checked){
+                    answeroption = document.getElementsByName("radio_4")[i].value
+                    answeroptiontext = d3.selectAll("#optiontext")._groups[0][i].innerHTML
+                }
+                //document.getElementsByName("radio_4")[i].checked = false
+            }
+            result_answes_timeconsuming.push(
+                {"index":dataimage[clickcount-1].index,
+                    "image": dataimage[clickcount-1].image,
+                    "answer": answeroption,
+                    "answeroptiontext":answeroptiontext,
+                    "time_consuming":timeconsuming ,
+                    "question":dataimage[clickcount-1].question
+                }
+            )
+        }
+        console.log("result_answes_timeconsuming"+ result_answes_timeconsuming.length)
+
+    }
+    if( clickcount >= dataimage.length  ){
+        alert("不要担心，没有出错\n,请点击确定后，然后把文本框的文字复制并发送给朱素佳")
+        d3.select("#allresult").append("textarea").attr("id","result_p").style("height","500px").attr("row","1000").attr("cols","80")
+
+        var string = ""
+        for(var t = 0 ;  t < result_answes_timeconsuming.length; t++){
+            string = string
+                + result_answes_timeconsuming[t].index+ ","
+                + result_answes_timeconsuming[t].image+ ","
+                //+ result_answes_timeconsuming[t].answer +","
+                + result_answes_timeconsuming[t].answeroptiontext.split(".")[1] +","
+                + result_answes_timeconsuming[t].time_consuming //+","
+                //+ result_answes_timeconsuming[t].question
+                +";\n"
+        }
+        resultstring = string
+        console.log(resultstring)
+        document.querySelector('#result_p').value = string
+
+        // //写入本地
+        // var fso
+        // try{
+        //     fso = new ActiveXObject("Scripting.FileSystemObject")
+        // }catch{
+        //     alert("写入文件失败，但可以复制下列文本给朱素佳")
+        //     return;
+        // }
+        // var file = fso.CreateTextFile("C:\\111111.txt",true)
+        // file.write(string)
+
+    }
+
+    clickcount ++
+})
+
+
+
+
+
+function start(){
+    next();
+    start_time = new Date();
+
+    document.getElementById("des").style.display='none';
+    document.getElementById("result").style.display='none';
+
+    document.getElementById("test").style.display='';
+}
+function next(){
+
+    if(nextImageIndex >= sortedIndexArray.length){
+        showResult();
+        return;
+    }
+    else{
+        document.getElementById("image").src = (timeDirectionImageArray[sortedIndexArray[nextImageIndex]]).name;
+        document.getElementById("question").innerHTML = (timeDirectionImageArray[sortedIndexArray[nextImageIndex]]).des;
+    }
+
+}
+function showResult(){
+    document.getElementById("test").style.display='none';
+    document.getElementById("result").style.display='';
+    document.getElementById("result_p").value = "";
+    //document.getElementById("result").innerHTML = "测试结果(秒):<br/>";
+    var re = "";
+    for(var i = 0; i <timeDirectionImageArray.length ; i+=2){
+        re += timeDirectionImageArray[i].time;
+        re +=",";
+    }
+    document.getElementById("result_p").value += "Embed:"
+    document.getElementById("result_p").value += re;
+    re = "";
+    for(var i = 1 ; i <timeDirectionImageArray.length; i+=2){
+        re += timeDirectionImageArray[i].time;
+        re +=",";
+    }
+    document.getElementById("result_p").value += "\nLink:"
+    document.getElementById("result_p").value += re;
+
+}
+
+</script>
